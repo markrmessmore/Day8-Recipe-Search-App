@@ -54,19 +54,19 @@ export default {
     return{
       food: [
         {
-          "item"        : "Pizza",
+          "title"        : "Pizza",
           "source_url"  : "http://pizzahut.com"
         },
         {
-          "item"        : "Taco",
+          "title"        : "Taco",
           "source_url"  : "http://tacobell.com"
         },
         {
-          "item"        : "Burgers",
+          "title"        : "Burgers",
           "source_url"  : "http://fiveguys.com"
         },
         {
-          "item"        : "Subs",
+          "title"        : "Subs",
           "source_url"  : "http://subway.com"
         }
       ]
@@ -75,11 +75,11 @@ export default {
 }
 </script>
 ```
-* In case you've forgotten this far down, we're making a ***Recipe App***. The plan, then, is to display ***recipe names*** and ***links***. The `data()` section holds just that...***data***. Therefore here we have defined an array named ***food***. The keys `item` and `source_url` are being used because eventually the ***API*** will be providing us those values.
+* In case you've forgotten this far down, we're making a ***Recipe App***. The plan, then, is to display ***recipe names*** and ***links***. The `data()` section holds just that...***data***. Therefore here we have defined an array named ***food***. The keys `title` and `source_url` are being used because eventually the ***API*** will be providing us those values.
 * Now that we have some data, let's get ***Vue*** to display it. No formatting yet, just display. To do so, above in your `<template>` section place `{{food}}` within your `div`. The result should look something like this:
 
 ```
-[ { "item": "Pizza", "source_url": "http://pizzahut.com" }, { "item": "Taco", "source_url": "http://tacobell.com" }, { "item": "Burgers", "source_url": "http://fiveguys.com" }, { "item": "Subs", "source_url": "http://subway.com" } ]
+[ { "title": "Pizza", "source_url": "http://pizzahut.com" }, { "title": "Taco", "source_url": "http://tacobell.com" }, { "title": "Burgers", "source_url": "http://fiveguys.com" }, { "title": "Subs", "source_url": "http://subway.com" } ]
 ```
 Here we are just demonstrating how by putting a variable in double squiggly braces `{{}}`, Vue understands that as a variable and places the data there.
 * Now let's fix how some things are displayed. In this example we are going to use a table. Remove the `{{food}}` from within your div and replace it with this:
@@ -92,7 +92,7 @@ Here we are just demonstrating how by putting a variable in double squiggly brac
   </tr>
   <tr v-for="recipe in food">
     <td>
-      {{recipe.item}}
+      {{recipe.title}}
     </td>
     <td>
       <a :href="recipe.source_url" target="_blank">Click here</a>
