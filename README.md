@@ -112,4 +112,4 @@ If you are familiar with HTML (which, if you are not...how have you made it this
 ![img1](https://github.com/markrmessmore/Day8-Recipe-Search-App/blob/master/images/1.jpg?raw=true)
 * We have recipes. We have links. Excellent!
 
-### In part 2 we will build upon this by querying an API to receive recipes and display what we get!
+### In [part 2](https://github.com/markrmessmore/Day9-Recipe-Search-App-Part2) we will build upon this by querying an API to receive recipes and display what we get!
